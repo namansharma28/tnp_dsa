@@ -24,72 +24,52 @@ id,title,topics,difficulty,leetcode_url,company_tags
 23,Merge Intervals,Array|Sorting,Medium,https://leetcode.com/problems/merge-intervals/,Amazon|Google|Microsoft
 24,Binary Tree Right Side View,Tree|DFS|BFS,Medium,https://leetcode.com/problems/binary-tree-right-side-view/,Amazon|Facebook|Microsoft
 25,House Robber,Dynamic Programming|Array,Medium,https://leetcode.com/problems/house-robber/,Amazon|Google|Apple
-26,Merge Strings Alternately,Two Pointers|Strings,Easy,https://leetcode.com/problems/merge-strings-alternately/,Amazon|Google|Apple
-27,Greatest Common Divisor of Strings,String,Easy,https://leetcode.com/problems/greatest-common-divisor-of-strings/,Amazon|Google|Microsoft
-28,Kids With the Greatest Number of Candies,Array,Easy,https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/,Amazon|Google|Apple
-29,Can Place Flowers,Array|Greedy,Easy,https://leetcode.com/problems/can-place-flowers/,Amazon|Microsoft|Google
-30,Reverse Vowels of a String,String|Two Pointers,Easy,https://leetcode.com/problems/reverse-vowels-of-a-string/,Amazon|Google|Microsoft
-31,Reverse Words in a String,String|Two Pointers,Medium,https://leetcode.com/problems/reverse-words-in-a-string/,Amazon|Facebook|Microsoft
-32,Product of Array Except Self,Array|Prefix Sum,Medium,https://leetcode.com/problems/product-of-array-except-self/,Amazon|Google|Facebook
-33,Increasing Triplet Subsequence,Array|Greedy,Medium,https://leetcode.com/problems/increasing-triplet-subsequence/,Amazon|Google|Microsoft
-34,String Compression,String|Two Pointers,Medium,https://leetcode.com/problems/string-compression/,Amazon|Google|Microsoft
-35,Move Zeroes,Array|Two Pointers,Easy,https://leetcode.com/problems/move-zeroes/,Amazon|Facebook|Google
-36,Is Subsequence,String|Two Pointers|Dynamic Programming,Easy,https://leetcode.com/problems/is-subsequence/,Google|Amazon|Microsoft
-37,Max Number of K-Sum Pairs,Array|Hash Table|Two Pointers,Medium,https://leetcode.com/problems/max-number-of-k-sum-pairs/,Amazon|Microsoft|Google
-38,Maximum Average Subarray I,Array|Sliding Window,Easy,https://leetcode.com/problems/maximum-average-subarray-i/,Amazon|Google|Facebook
-39,Maximum Number of Vowels in a Substring of Given Length,String|Sliding Window,Medium,https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/,Amazon|Google|Microsoft
-40,Max Consecutive Ones III,Array|Sliding Window,Medium,https://leetcode.com/problems/max-consecutive-ones-iii/,Amazon|Google|Microsoft
-41,Longest Subarray of 1's After Deleting One Element,Array|Sliding Window,Medium,https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/,Amazon|Microsoft|Google
-42,Find the Highest Altitude,Array|Prefix Sum,Easy,https://leetcode.com/problems/find-the-highest-altitude/,Amazon|Google|Apple
-43,Find Pivot Index,Array|Prefix Sum,Easy,https://leetcode.com/problems/find-pivot-index/,Amazon|Microsoft|Google
-44,Find the Difference of Two Arrays,Array|Hash Table,Easy,https://leetcode.com/problems/find-the-difference-of-two-arrays/,Amazon|Google|Microsoft
-45,Unique Number of Occurrences,Array|Hash Table,Easy,https://leetcode.com/problems/unique-number-of-occurrences/,Amazon|Google|Apple
-46,Determine if Two Strings Are Close,Hash Table|Sorting|String,Medium,https://leetcode.com/problems/determine-if-two-strings-are-close/,Amazon|Google|Microsoft
-47,Equal Row and Column Pairs,Array|Hash Table|Matrix,Medium,https://leetcode.com/problems/equal-row-and-column-pairs/,Amazon|Google|Microsoft
-48,Removing Stars From a String,String|Stack,Medium,https://leetcode.com/problems/removing-stars-from-a-string/,Amazon|Google|Microsoft
-49,Asteroid Collision,Array|Stack,Medium,https://leetcode.com/problems/asteroid-collision/,Amazon|Microsoft|Google
-50,Decode String,String|Stack,Medium,https://leetcode.com/problems/decode-string/,Amazon|Facebook|Google
-51,Number of Recent Calls,Queue|Design|Data Stream,Easy,https://leetcode.com/problems/number-of-recent-calls/,Amazon|Google|Microsoft
-52,Dota2 Senate,Greedy|Queue|String,Medium,https://leetcode.com/problems/dota2-senate/,Amazon|Google|Microsoft
-53,Delete the Middle Node of a Linked List,Linked List|Two Pointers,Medium,https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/,Amazon|Microsoft|Google
-54,Odd Even Linked List,Linked List,Medium,https://leetcode.com/problems/odd-even-linked-list/,Amazon|Microsoft|Facebook
-55,Maximum Twin Sum of a Linked List,Linked List|Two Pointers|Stack,Medium,https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/,Amazon|Google|Microsoft
-56,Leaf-Similar Trees,Tree|DFS,Easy,https://leetcode.com/problems/leaf-similar-trees/,Amazon|Google|Microsoft
-57,Count Good Nodes in Binary Tree,Tree|DFS,Medium,https://leetcode.com/problems/count-good-nodes-in-binary-tree/,Amazon|Google|Facebook
-58,Path Sum III,Tree|DFS|Prefix Sum,Medium,https://leetcode.com/problems/path-sum-iii/,Amazon|Microsoft|Facebook
-59,Longest ZigZag Path in a Binary Tree,Tree|DFS|Dynamic Programming,Medium,https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/,Amazon|Google|Microsoft
-60,Lowest Common Ancestor of a Binary Tree,Tree|DFS,Medium,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/,Amazon|Microsoft|Google
-61,Maximum Level Sum of a Binary Tree,Tree|BFS|DFS,Medium,https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/,Amazon|Google|Microsoft
-62,Search in a Binary Search Tree,Tree|BST,Easy,https://leetcode.com/problems/search-in-a-binary-search-tree/,Amazon|Google|Microsoft
-63,Delete Node in a BST,Tree|BST,Medium,https://leetcode.com/problems/delete-node-in-a-bst/,Amazon|Google|Microsoft
-64,Keys and Rooms,Graph|DFS|BFS,Medium,https://leetcode.com/problems/keys-and-rooms/,Amazon|Google|Facebook
-65,Number of Provinces,Graph|DFS|BFS|Union Find,Medium,https://leetcode.com/problems/number-of-provinces/,Amazon|Google|Microsoft
-66,Reorder Routes to Make All Paths Lead to the City Zero,Graph|DFS|BFS,Medium,https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/,Amazon|Google|Microsoft
-67,Evaluate Division,Graph|DFS|BFS|Union Find,Medium,https://leetcode.com/problems/evaluate-division/,Google|Amazon|Facebook
-68,Nearest Exit from Entrance in Maze,Matrix|BFS,Medium,https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/,Amazon|Google|Microsoft
-69,Rotting Oranges,Matrix|BFS,Medium,https://leetcode.com/problems/rotting-oranges/,Amazon|Google|Facebook
-70,Kth Largest Element in an Array,Array|Heap|Sorting,Medium,https://leetcode.com/problems/kth-largest-element-in-an-array/,Amazon|Microsoft|Google
-71,Smallest Number in Infinite Set,Heap|Hash Table|Design,Medium,https://leetcode.com/problems/smallest-number-in-infinite-set/,Amazon|Google|Microsoft
-72,Maximum Subsequence Score,Array|Greedy|Heap,Medium,https://leetcode.com/problems/maximum-subsequence-score/,Amazon|Google|Microsoft
-73,Total Cost to Hire K Workers,Array|Heap|Two Pointers,Medium,https://leetcode.com/problems/total-cost-to-hire-k-workers/,Amazon|Google|Microsoft
-74,Guess Number Higher or Lower,Binary Search,Easy,https://leetcode.com/problems/guess-number-higher-or-lower/,Google|Amazon|Microsoft
-75,Successful Pairs of Spells and Potions,Array|Binary Search|Two Pointers,Medium,https://leetcode.com/problems/successful-pairs-of-spells-and-potions/,Amazon|Google|Microsoft
-76,Find Peak Element,Array|Binary Search,Medium,https://leetcode.com/problems/find-peak-element/,Google|Amazon|Microsoft
-77,Koko Eating Bananas,Array|Binary Search,Medium,https://leetcode.com/problems/koko-eating-bananas/,Amazon|Google|Microsoft
-78,Letter Combinations of a Phone Number,Hash Table|Backtracking|String,Medium,https://leetcode.com/problems/letter-combinations-of-a-phone-number/,Amazon|Google|Facebook
-79,Combination Sum III,Array|Backtracking,Medium,https://leetcode.com/problems/combination-sum-iii/,Amazon|Microsoft|Google
-80,N-th Tribonacci Number,Dynamic Programming|Math,Easy,https://leetcode.com/problems/n-th-tribonacci-number/,Amazon|Google|Microsoft
-81,Min Cost Climbing Stairs,Array|Dynamic Programming,Easy,https://leetcode.com/problems/min-cost-climbing-stairs/,Amazon|Google|Apple
-82,Domino and Tromino Tiling,Dynamic Programming,Medium,https://leetcode.com/problems/domino-and-tromino-tiling/,Google|Amazon|Microsoft
-83,Longest Common Subsequence,Dynamic Programming|String,Medium,https://leetcode.com/problems/longest-common-subsequence/,Amazon|Microsoft|Google
-84,Best Time to Buy and Sell Stock with Transaction Fee,Array|Dynamic Programming,Medium,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/,Amazon|Google|Microsoft
-85,Edit Distance,Dynamic Programming|String,Medium,https://leetcode.com/problems/edit-distance/,Google|Amazon|Microsoft
-86,Counting Bits,Dynamic Programming|Bit Manipulation,Easy,https://leetcode.com/problems/counting-bits/,Amazon|Google|Microsoft
-87,Single Number,Array|Bit Manipulation,Easy,https://leetcode.com/problems/single-number/,Amazon|Microsoft|Google
-88,Minimum Flips to Make a OR b Equal to c,Bit Manipulation,Medium,https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/,Amazon|Google|Microsoft
-89,Implement Trie (Prefix Tree),Trie|Hash Table|Design,Medium,https://leetcode.com/problems/implement-trie-prefix-tree/,Google|Amazon|Facebook
-90,Search Suggestions System,Array|Binary Search|Trie,Medium,https://leetcode.com/problems/search-suggestions-system/,Amazon|Google|Microsoft
-91,Non-overlapping Intervals,Array|Greedy|Dynamic Programming,Medium,https://leetcode.com/problems/non-overlapping-intervals/,Facebook|Amazon|Google
-92,Minimum Number of Arrows to Burst Balloons,Array|Greedy|Sorting,Medium,https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/,Amazon|Google|Microsoft
-93,Daily Temperatures,Array|Stack|Monotonic Stack,Medium,https://leetcode.com/problems/daily-temperatures/,Amazon|Facebook|Google
-94,Online Stock Span,Stack|Monotonic Stack|Design,Medium,https://leetcode.com/problems/online-stock-span/,Amazon|Google|Microsoft
+26,Contains Duplicate,Array|Hash Table,Easy,https://leetcode.com/problems/contains-duplicate/,Amazon|Microsoft|Google
+27,Valid Anagram,String|Hash Table|Sorting,Easy,https://leetcode.com/problems/valid-anagram/,Amazon|Google|Microsoft
+28,Group Anagrams,String|Hash Table|Sorting,Medium,https://leetcode.com/problems/group-anagrams/,Amazon|Facebook|Google
+29,Top K Frequent Elements,Array|Hash Table|Heap,Medium,https://leetcode.com/problems/top-k-frequent-elements/,Amazon|Google|Facebook
+30,Encode and Decode Strings,String|Design,Medium,https://leetcode.com/problems/encode-and-decode-strings/,Google|Facebook|Amazon
+31,Product of Array Except Self,Array|Prefix Sum,Medium,https://leetcode.com/problems/product-of-array-except-self/,Amazon|Google|Facebook
+32,Longest Consecutive Sequence,Array|Hash Table,Medium,https://leetcode.com/problems/longest-consecutive-sequence/,Amazon|Google|Microsoft
+33,Best Time to Buy and Sell Stock,Array|Dynamic Programming,Easy,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Amazon|Google|Microsoft
+34,Longest Repeating Character Replacement,String|Sliding Window,Medium,https://leetcode.com/problems/longest-repeating-character-replacement/,Amazon|Google|Microsoft
+35,Minimum Window Substring,String|Sliding Window|Hash Table,Hard,https://leetcode.com/problems/minimum-window-substring/,Amazon|Facebook|Google
+36,Find Minimum in Rotated Sorted Array,Array|Binary Search,Medium,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/,Amazon|Google|Microsoft
+37,Search in Rotated Sorted Array,Array|Binary Search,Medium,https://leetcode.com/problems/search-in-rotated-sorted-array/,Amazon|Facebook|Google
+38,Reverse Linked List,Linked List,Easy,https://leetcode.com/problems/reverse-linked-list/,Amazon|Microsoft|Apple
+39,Linked List Cycle,Linked List|Two Pointers,Easy,https://leetcode.com/problems/linked-list-cycle/,Amazon|Microsoft|Google
+40,Reorder List,Linked List|Two Pointers,Medium,https://leetcode.com/problems/reorder-list/,Amazon|Facebook|Microsoft
+41,Remove Nth Node From End of List,Linked List|Two Pointers,Medium,https://leetcode.com/problems/remove-nth-node-from-end-of-list/,Amazon|Microsoft|Facebook
+42,Merge K Sorted Lists,Linked List|Heap|Divide and Conquer,Hard,https://leetcode.com/problems/merge-k-sorted-lists/,Amazon|Google|Facebook
+43,Invert Binary Tree,Tree|DFS|BFS,Easy,https://leetcode.com/problems/invert-binary-tree/,Google|Amazon|Microsoft
+44,Same Tree,Tree|DFS|BFS,Easy,https://leetcode.com/problems/same-tree/,Amazon|Microsoft|Google
+45,Subtree of Another Tree,Tree|DFS,Easy,https://leetcode.com/problems/subtree-of-another-tree/,Amazon|Facebook|Microsoft
+46,Lowest Common Ancestor of a Binary Search Tree,Tree|BST,Easy,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/,Amazon|Microsoft|Google
+47,Validate Binary Search Tree,Tree|DFS|BST,Medium,https://leetcode.com/problems/validate-binary-search-tree/,Amazon|Google|Microsoft
+48,Kth Smallest Element in a BST,Tree|DFS|BST,Medium,https://leetcode.com/problems/kth-smallest-element-in-a-bst/,Amazon|Facebook|Microsoft
+49,Construct Binary Tree from Preorder and Inorder Traversal,Tree|DFS,Medium,https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/,Amazon|Microsoft|Facebook
+50,Binary Tree Maximum Path Sum,Tree|DFS,Hard,https://leetcode.com/problems/binary-tree-maximum-path-sum/,Amazon|Facebook|Google
+51,Serialize and Deserialize Binary Tree,Tree|DFS|Design,Hard,https://leetcode.com/problems/serialize-and-deserialize-binary-tree/,Amazon|Facebook|Google
+52,Find Median from Data Stream,Heap|Design,Hard,https://leetcode.com/problems/find-median-from-data-stream/,Google|Amazon|Facebook
+53,Combination Sum,Array|Backtracking,Medium,https://leetcode.com/problems/combination-sum/,Amazon|Microsoft|Adobe
+54,Implement Trie (Prefix Tree),Trie|Design,Medium,https://leetcode.com/problems/implement-trie-prefix-tree/,Google|Amazon|Facebook
+55,Design Add and Search Words Data Structure,Trie|DFS|Design,Medium,https://leetcode.com/problems/design-add-and-search-words-data-structure/,Facebook|Amazon|Google
+56,Word Search II,Trie|Backtracking,Hard,https://leetcode.com/problems/word-search-ii/,Amazon|Microsoft|Facebook
+57,Clone Graph,Graph|DFS|BFS,Medium,https://leetcode.com/problems/clone-graph/,Amazon|Facebook|Google
+58,Pacific Atlantic Water Flow,Graph|DFS|BFS,Medium,https://leetcode.com/problems/pacific-atlantic-water-flow/,Google|Amazon|Microsoft
+59,Graph Valid Tree,Graph|DFS|Union Find,Medium,https://leetcode.com/problems/graph-valid-tree/,Google|Facebook|Amazon
+60,Number of Connected Components in an Undirected Graph,Graph|DFS|Union Find,Medium,https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/,Google|Amazon|Facebook
+61,Alien Dictionary,Graph|Topological Sort,Hard,https://leetcode.com/problems/alien-dictionary/,Google|Facebook|Amazon
+62,Jump Game,Greedy|Array,Medium,https://leetcode.com/problems/jump-game/,Amazon|Microsoft|Google
+63,Insert Interval,Array|Sorting,Medium,https://leetcode.com/problems/insert-interval/,Google|Amazon|Microsoft
+64,Non-Overlapping Intervals,Array|Greedy|Sorting,Medium,https://leetcode.com/problems/non-overlapping-intervals/,Facebook|Amazon|Google
+65,Meeting Rooms,Array|Sorting,Easy,https://leetcode.com/problems/meeting-rooms/,Google|Facebook|Amazon
+66,Meeting Rooms II,Array|Heap|Sorting,Medium,https://leetcode.com/problems/meeting-rooms-ii/,Google|Facebook|Amazon
+67,Rotate Image,Array|Matrix,Medium,https://leetcode.com/problems/rotate-image/,Amazon|Microsoft|Google
+68,Spiral Matrix,Array|Matrix,Medium,https://leetcode.com/problems/spiral-matrix/,Amazon|Google|Microsoft
+69,Set Matrix Zeroes,Array|Matrix,Medium,https://leetcode.com/problems/set-matrix-zeroes/,Amazon|Microsoft|Google
+70,Number of 1 Bits,Bit Manipulation,Easy,https://leetcode.com/problems/number-of-1-bits/,Amazon|Google|Microsoft
+71,Counting Bits,Dynamic Programming|Bit Manipulation,Easy,https://leetcode.com/problems/counting-bits/,Amazon|Google|Microsoft
+72,Reverse Bits,Bit Manipulation,Easy,https://leetcode.com/problems/reverse-bits/,Amazon|Microsoft|Google
+73,Missing Number,Array|Bit Manipulation,Easy,https://leetcode.com/problems/missing-number/,Amazon|Google|Microsoft
+74,Sum of Two Integers,Bit Manipulation|Math,Medium,https://leetcode.com/problems/sum-of-two-integers/,Amazon|Google|Microsoft
