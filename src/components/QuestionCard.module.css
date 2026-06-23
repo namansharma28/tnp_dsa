@@ -18,17 +18,14 @@
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Card borders based on difficulty */
-.cardEasy {
-  border-top: 4px solid var(--text-easy);
+.cardSolved {
+  background-color: #fafdfc;
+  border-color: var(--border-easy);
+  opacity: 0.85;
 }
 
-.cardMedium {
-  border-top: 4px solid var(--text-medium);
-}
-
-.cardHard {
-  border-top: 4px solid var(--text-hard);
+.cardSolved:hover {
+  opacity: 1;
 }
 
 .header {
@@ -37,6 +34,13 @@
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
+}
+
+.titleSection {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex: 1;
 }
 
 .title {
@@ -51,6 +55,49 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 1;
+}
+
+.cardSolved .title {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* Custom Checkbox */
+.checkbox {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-color-hover);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.15rem;
+  transition: var(--transition-smooth);
+}
+
+.checkbox:hover {
+  border-color: var(--color-brand);
+  background-color: var(--color-brand-light);
+}
+
+.checkboxSolved {
+  border-color: var(--text-easy);
+  background-color: var(--text-easy);
+}
+
+.checkboxSolved:hover {
+  border-color: #047857;
+  background-color: #047857;
+}
+
+.checkIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: white;
 }
 
 /* Badges */
@@ -127,7 +174,7 @@
 .topicTeal {
   background-color: #f0fdfa;
   color: #0d9488;
-  border-color: #99f6e4;
+  border-color: #ccfbf1;
 }
 
 .topicEmerald {

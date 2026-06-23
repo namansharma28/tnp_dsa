@@ -176,7 +176,7 @@
 .topicTeal {
   background-color: #f0fdfa;
   color: #0d9488;
-  border-color: #99f6e4;
+  border-color: #ccfbf1;
 }
 
 .topicEmerald {
@@ -188,6 +188,9 @@
 /* Action Section */
 .actionSection {
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .solveButton {
@@ -221,4 +224,66 @@
 .solveCtaIcon {
   width: 1rem;
   height: 1rem;
+}
+
+/* Solved Toggle Switch */
+.solveToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  width: 100%;
+}
+
+.solveToggle:hover {
+  border-color: var(--border-color-hover);
+  background-color: #e2e8f0;
+}
+
+.solvedActive {
+  background-color: var(--bg-easy);
+  border-color: var(--border-easy);
+  color: var(--text-easy);
+}
+
+.solvedActive:hover {
+  background-color: #e0e7ff;
+  border-color: var(--border-easy);
+  color: var(--text-easy);
+}
+
+.toggleIndicator {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.solveToggle:hover .toggleIndicator {
+  border-color: var(--color-text-primary);
+}
+
+.solvedActive .toggleIndicator {
+  border-color: var(--text-easy);
+  background-color: var(--text-easy);
+}
+
+.checkIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: white;
 }

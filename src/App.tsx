@@ -20,6 +20,21 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
 
+  // Solved questions tracking
+  const [solvedQuestions, setSolvedQuestions] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('rgpv_dsa_solved_questions');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  // Sync solved questions to localStorage
+  useEffect(() => {
+    localStorage.setItem('rgpv_dsa_solved_questions', JSON.stringify(solvedQuestions));
+  }, [solvedQuestions]);
+
   // Debounce search query
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -47,6 +62,12 @@ function App() {
     loadQuestions();
   }, []);
 
+  const toggleSolved = (id: string) => {
+    setSolvedQuestions((prev) =>
+      prev.includes(id) ? prev.filter((qId) => qId !== id) : [...prev, id]
+    );
+  };
+
   // Get unique topics and difficulties
   const topics = useMemo(() => {
     const topicSet = new Set<string>();
@@ -59,6 +80,41 @@ function App() {
   const difficulties = useMemo(() => {
     return ['Easy', 'Medium', 'Hard'];
   }, []);
+
+  // Prep dashboard stats
+  const stats = useMemo(() => {
+    const total = questions.length;
+    const solved = questions.filter((q) => solvedQuestions.includes(q.id)).length;
+    
+    const easyTotal = questions.filter((q) => q.difficulty === 'Easy').length;
+    const easySolved = questions.filter(
+      (q) => q.difficulty === 'Easy' && solvedQuestions.includes(q.id)
+    ).length;
+
+    const mediumTotal = questions.filter((q) => q.difficulty === 'Medium').length;
+    const mediumSolved = questions.filter(
+      (q) => q.difficulty === 'Medium' && solvedQuestions.includes(q.id)
+    ).length;
+
+    const hardTotal = questions.filter((q) => q.difficulty === 'Hard').length;
+    const hardSolved = questions.filter(
+      (q) => q.difficulty === 'Hard' && solvedQuestions.includes(q.id)
+    ).length;
+
+    const percent = total > 0 ? Math.round((solved / total) * 100) : 0;
+
+    return {
+      total,
+      solved,
+      easyTotal,
+      easySolved,
+      mediumTotal,
+      mediumSolved,
+      hardTotal,
+      hardSolved,
+      percent,
+    };
+  }, [questions, solvedQuestions]);
 
   // Filter questions
   const filteredQuestions = useMemo(() => {
@@ -116,6 +172,45 @@ function App() {
           </div>
         </section>
 
+        {/* Dashboard Progress Panel */}
+        <section className={styles.dashboard}>
+          <div className={styles.dashboardCard}>
+            <div className={styles.dashboardHeader}>
+              <div>
+                <h2 className={styles.dashboardTitle}>Preparation Progress</h2>
+                <p className={styles.dashboardSubtitle}>Track your individual placement readiness</p>
+              </div>
+              <span className={styles.dashboardPercent}>{stats.percent}% Solved</span>
+            </div>
+            
+            <div className={styles.progressBarWrapper}>
+              <div 
+                className={styles.progressBar} 
+                style={{ width: `${stats.percent}%` }}
+              ></div>
+            </div>
+
+            <div className={styles.statsGrid}>
+              <div className={styles.statBox}>
+                <span className={styles.statLabel}>Total Solved</span>
+                <span className={styles.statValue}>{stats.solved} <span className={styles.statSlash}>/ {stats.total}</span></span>
+              </div>
+              <div className={`${styles.statBox} ${styles.statEasy}`}>
+                <span className={styles.statLabel}>Easy</span>
+                <span className={styles.statValue}>{stats.easySolved} <span className={styles.statSlash}>/ {stats.easyTotal}</span></span>
+              </div>
+              <div className={`${styles.statBox} ${styles.statMedium}`}>
+                <span className={styles.statLabel}>Medium</span>
+                <span className={styles.statValue}>{stats.mediumSolved} <span className={styles.statSlash}>/ {stats.mediumTotal}</span></span>
+              </div>
+              <div className={`${styles.statBox} ${styles.statHard}`}>
+                <span className={styles.statLabel}>Hard</span>
+                <span className={styles.statValue}>{stats.hardSolved} <span className={styles.statSlash}>/ {stats.hardTotal}</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Filters */}
         <Filters
           topics={topics}
@@ -153,6 +248,11 @@ function App() {
                 <QuestionCard
                   key={question.id}
                   question={question}
+                  isSolved={solvedQuestions.includes(question.id)}
+                  onToggleSolved={(e) => {
+                    e.stopPropagation();
+                    toggleSolved(question.id);
+                  }}
                   onClick={() => setSelectedQuestion(question)}
                 />
               ))}
@@ -188,6 +288,8 @@ function App() {
       {selectedQuestion && (
         <Modal 
           question={selectedQuestion} 
+          isSolved={solvedQuestions.includes(selectedQuestion.id)}
+          onToggleSolved={() => toggleSolved(selectedQuestion.id)}
           onClose={() => setSelectedQuestion(null)} 
         />
       )}
@@ -196,5 +298,3 @@ function App() {
 }
 
 export default App;
-
-
