@@ -16,5 +16,5 @@ export interface AptitudeQuestion {
   id: string;
   title: string;
   topics: string;
-  practice_url: string;
+  practice_urls: string[];
 }

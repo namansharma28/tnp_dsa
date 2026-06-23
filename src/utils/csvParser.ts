@@ -75,12 +75,14 @@ export const parseAptitudeCSV = (csv: string): AptitudeQuestion[] => {
     if (!lines[i].trim()) continue;
     const values = parseCSVLine(lines[i]);
 
-    if (values.length >= 4) {
+    if (values.length >= 2) {
       questions.push({
-        id: values[0],
-        title: values[1],
-        topics: values[2],
-        practice_url: values[3],
+        id: `apt-${i}`,
+        title: values[0].replace(/^"|"$/g, '').trim(),
+        topics: values[1] ? values[1].replace(/^"|"$/g, '').trim() : 'General',
+        practice_urls: values.slice(2)
+          .map(url => url.replace(/^"|"$/g, '').trim())
+          .filter(url => url.length > 0),
       });
     }
   }

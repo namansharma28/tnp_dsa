@@ -46,22 +46,13 @@ const QuestionCard = ({
     return colors[hash % colors.length];
   };
 
-  const handleClick = () => {
-    if (isAptitude) {
-      const q = question as AptitudeQuestion;
-      window.open(q.practice_url, '_blank');
-    } else {
-      onClick();
-    }
-  };
-
   const topics = question.topics.split('|');
 
   return (
     <div 
       className={`${styles.card} ${isSolved ? styles.cardSolved : ''} ${isAptitude ? styles.aptitudeCard : ''}`} 
-      onClick={handleClick}
-      title={isAptitude ? "Click to open practice resource directly" : "Click to view details"}
+      onClick={onClick}
+      title={isAptitude ? "Click to view practice resources" : "Click to view details"}
     >
       <div className={styles.header}>
         <div className={styles.titleSection}>

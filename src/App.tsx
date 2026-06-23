@@ -4,6 +4,7 @@ import QuestionCard from './components/QuestionCard';
 import Filters from './components/Filters';
 import Pagination from './components/Pagination';
 import Modal from './components/Modal';
+import AptitudeModal from './components/AptitudeModal';
 import type { Question, AptitudeQuestion, Notice } from './types';
 import { parseCSV, parseNoticesCSV, parseAptitudeCSV } from './utils/csvParser';
 import styles from './App.module.css';
@@ -33,6 +34,7 @@ function App() {
 
   // Selected question modal
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
+  const [selectedAptitudeQuestion, setSelectedAptitudeQuestion] = useState<AptitudeQuestion | null>(null);
 
   // Persistent user progress states
   const [solvedDsa, setSolvedDsa] = useState<string[]>(() => {
@@ -568,7 +570,7 @@ function App() {
                         e.stopPropagation();
                         toggleSolvedAptitude(question.id);
                       }}
-                      onClick={() => { }} // clicking redirects directly (handled in Card)
+                      onClick={() => setSelectedAptitudeQuestion(question)}
                     />
                   ))}
                 </div>
@@ -608,6 +610,16 @@ function App() {
           isSolved={solvedDsa.includes(selectedQuestion.id)}
           onToggleSolved={() => toggleSolvedDsa(selectedQuestion.id)}
           onClose={() => setSelectedQuestion(null)}
+        />
+      )}
+
+      {/* Modal detail overlay (Aptitude only) */}
+      {selectedAptitudeQuestion && (
+        <AptitudeModal
+          question={selectedAptitudeQuestion}
+          isSolved={solvedAptitude.includes(selectedAptitudeQuestion.id)}
+          onToggleSolved={() => toggleSolvedAptitude(selectedAptitudeQuestion.id)}
+          onClose={() => setSelectedAptitudeQuestion(null)}
         />
       )}
     </div>
