@@ -98,12 +98,12 @@ id,title,topics,difficulty,leetcode_url,company_tags
 97,Excel Sheet Column Number,Math|String,Easy,https://leetcode.com/problems/excel-sheet-column-number/,Amazon|Google|Microsoft
 98,Factorial Trailing Zeroes,Math,Medium,https://leetcode.com/problems/factorial-trailing-zeroes/,Amazon|Microsoft|Google
 99,Pow(x,n),Math|Recursion|Binary Exponentiation,Medium,https://leetcode.com/problems/powx-n/,Google|Amazon|Microsoft
-100,Super Pow,Math|Modular Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
+100,Super Pow,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
 101,Nth Magical Number,Math|Binary Search|LCM,Hard,https://leetcode.com/problems/nth-magical-number/,Google|Amazon|Microsoft
 102,Smallest Integer Divisible by K,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/smallest-integer-divisible-by-k/,Google|Amazon|Microsoft
 103,Reach a Number,Math,Medium,https://leetcode.com/problems/reach-a-number/,Google|Amazon|Microsoft
 104,Mirror Reflection,Math|Geometry|GCD,Medium,https://leetcode.com/problems/mirror-reflection/,Google|Amazon|Microsoft
-105,Water and Jug Problem,Math|GCD|Bézout's Identity,Medium,https://leetcode.com/problems/water-and-jug-problem/,Google|Amazon|Microsoft
+105,Water and Jug Problem,Math|GCD|Number Theory,Medium,https://leetcode.com/problems/water-and-jug-problem/,Google|Amazon|Microsoft
 106,Check If It Is a Good Array,Math|GCD|Number Theory,Hard,https://leetcode.com/problems/check-if-it-is-a-good-array/,Google|Amazon|Microsoft
 107,Replace Non-Coprime Numbers in Array,Stack|Math|LCM|GCD,Hard,https://leetcode.com/problems/replace-non-coprime-numbers-in-array/,Google|Amazon|Microsoft
 108,Number of Subarrays With LCM Equal to K,Array|Math|LCM,Medium,https://leetcode.com/problems/number-of-subarrays-with-lcm-equal-to-k/,Amazon|Google|Microsoft
