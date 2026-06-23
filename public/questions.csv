@@ -73,3 +73,16 @@ id,title,topics,difficulty,leetcode_url,company_tags
 72,Reverse Bits,Bit Manipulation,Easy,https://leetcode.com/problems/reverse-bits/,Amazon|Microsoft|Google
 73,Missing Number,Array|Bit Manipulation,Easy,https://leetcode.com/problems/missing-number/,Amazon|Google|Microsoft
 74,Sum of Two Integers,Bit Manipulation|Math,Medium,https://leetcode.com/problems/sum-of-two-integers/,Amazon|Google|Microsoft
+75,Count Elements With Maximum Frequency,Array|Hash Table,Easy,https://leetcode.com/problems/count-elements-with-maximum-frequency/,Amazon|Google|Microsoft
+76,Check If Array Contains Duplicate Elements Within K Distance,Array|Hash Table|Sliding Window,Easy,https://www.geeksforgeeks.org/dsa/check-given-array-contains-duplicate-elements-within-k-distance/,Google|Amazon|Microsoft
+77,Count Number of Bad Pairs,Array|Hash Table|Math,Medium,https://leetcode.com/problems/count-number-of-bad-pairs/,Amazon|Google|Microsoft
+78,Count Number of Pairs With Absolute Difference K,Array|Hash Table,Easy,https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/,Amazon|Google|Microsoft
+79,Subarray Sum Equals K,Array|Hash Table|Prefix Sum,Medium,https://leetcode.com/problems/subarray-sum-equals-k/,Amazon|Facebook|Google
+80,Longest Sub-Array With Sum K,Array|Hash Table|Prefix Sum,Medium,https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1,Amazon|Microsoft|Google
+81,Longest Palindrome by Concatenating Two Letter Words,Hash Table|Greedy|String,Medium,https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/,Amazon|Google|Microsoft
+82,Range Sum Query Immutable,Array|Prefix Sum|Design,Easy,https://leetcode.com/problems/range-sum-query-immutable/,Google|Amazon|Microsoft
+83,Find First and Last Position of Element in Sorted Array,Array|Binary Search,Medium,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/,Amazon|Google|Microsoft
+84,Single Element in a Sorted Array,Array|Binary Search,Medium,https://leetcode.com/problems/single-element-in-a-sorted-array/,Google|Amazon|Microsoft
+85,Minimum Amount of Damage Dealt to Bob,Greedy|Sorting,Hard,https://leetcode.com/problems/minimum-amount-of-damage-dealt-to-bob/,Google|Amazon|Microsoft
+86,Decode Ways,String|Dynamic Programming,Medium,https://leetcode.com/problems/decode-ways/,Amazon|Google|Microsoft
+87,Word Break,String|Dynamic Programming,Medium,https://leetcode.com/problems/word-break/,Amazon|Facebook|Google
