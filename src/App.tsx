@@ -283,7 +283,9 @@ function App() {
             <img src="/tnp_logo.jpg" alt="T&P Cell RGPV" className={styles.heroImage} />
           </div>
         </section>
-        {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
+        {activeTab === 'home' && (
+          <div className={styles.homeLayout}>
+            {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
             <div className={styles.progressRow}>
               {/* Prepare for DSA Card */}
               <div className={styles.prepCard}>
@@ -335,11 +337,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-        )}
-        {activeTab === 'home' && (
-          <div className={styles.homeLayout}>
-            {/* NOTICE SECTION: Takes 3/4th of area */}
             <section className={styles.noticeSection}>
               <div className={styles.noticeBoard}>
                 <div className={styles.noticeHeader}>
@@ -374,62 +371,8 @@ function App() {
                 )}
               </div>
             </section>
-
-            /*
-            {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
-            <div className={styles.progressRow}>
-              {/* Prepare for DSA Card */}
-              <div className={styles.prepCard}>
-                <div className={styles.prepHeader}>
-                  <h3 className={styles.prepCardTitle}>Prepare for DSA</h3>
-                  <span className={styles.prepPercent}>{dsaStats.percent}%</span>
-                </div>
-
-                <div className={styles.prepProgressWrapper}>
-                  <div
-                    className={styles.prepProgressBar}
-                    style={{ width: `${dsaStats.percent}%` }}
-                  ></div>
-                </div>
-
-                <div className={styles.prepInfo}>
-                  <span>Solved {dsaStats.solved} of {dsaStats.total} Questions</span>
-                  <button
-                    onClick={() => setActiveTab('dsa')}
-                    className={styles.prepButton}
-                    Practice DSA →
-                   >
-                 </button>
-                </div>
-              </div>
-
-              {/* Prepare for Aptitude Card */}
-              <div className={styles.prepCard}>
-                <div className={styles.prepHeader}>
-                  <h3 className={styles.prepCardTitle}>Prepare for Aptitude</h3>
-                  <span className={styles.prepPercent}>{aptStats.percent}%</span>
-                </div>
-
-                <div className={styles.prepProgressWrapper}>
-                  <div
-                    className={styles.prepProgressBar}
-                    style={{ width: `${aptStats.percent}%` }}
-                  ></div>
-                </div>
-
-                <div className={styles.prepInfo}>
-                  <span>Solved {aptStats.solved} of {aptStats.total} Questions</span>
-                  <button
-                    onClick={() => setActiveTab('aptitude')}
-                    className={styles.prepButton}
-                  >
-                    Practice Aptitude →
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
-        )} */
+        )}
 
         {/* VIEW 2: DSA CURRICULUM VIEW */}
         {activeTab === 'dsa' && (
