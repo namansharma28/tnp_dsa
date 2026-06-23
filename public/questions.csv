@@ -1,0 +1,26 @@
+id,title,topics,difficulty,leetcode_url,company_tags
+1,Two Sum,Array|Hash Table,Easy,https://leetcode.com/problems/two-sum/,Amazon|Google|Microsoft
+2,Add Two Numbers,Linked List|Math,Medium,https://leetcode.com/problems/add-two-numbers/,Amazon|Microsoft|Apple
+3,Longest Substring Without Repeating Characters,String|Hash Table|Sliding Window,Medium,https://leetcode.com/problems/longest-substring-without-repeating-characters/,Amazon|Google|Bloomberg
+4,Median of Two Sorted Arrays,Array|Binary Search,Hard,https://leetcode.com/problems/median-of-two-sorted-arrays/,Google|Amazon|Microsoft
+5,Longest Palindromic Substring,String|Dynamic Programming,Medium,https://leetcode.com/problems/longest-palindromic-substring/,Amazon|Microsoft|Adobe
+6,Reverse Integer,Math,Medium,https://leetcode.com/problems/reverse-integer/,Apple|Google|Amazon
+7,Palindrome Number,Math,Easy,https://leetcode.com/problems/palindrome-number/,Amazon|Apple|Google
+8,Container With Most Water,Array|Two Pointers,Medium,https://leetcode.com/problems/container-with-most-water/,Amazon|Google|Facebook
+9,3Sum,Array|Two Pointers|Sorting,Medium,https://leetcode.com/problems/3sum/,Amazon|Microsoft|Facebook
+10,Merge Two Sorted Lists,Linked List|Recursion,Easy,https://leetcode.com/problems/merge-two-sorted-lists/,Amazon|Microsoft|Apple
+11,Valid Parentheses,String|Stack,Easy,https://leetcode.com/problems/valid-parentheses/,Amazon|Google|Microsoft
+12,Binary Tree Inorder Traversal,Tree|DFS|Stack,Easy,https://leetcode.com/problems/binary-tree-inorder-traversal/,Amazon|Microsoft|Google
+13,Maximum Depth of Binary Tree,Tree|DFS|BFS,Easy,https://leetcode.com/problems/maximum-depth-of-binary-tree/,Amazon|Apple|Microsoft
+14,Climbing Stairs,Dynamic Programming|Math,Easy,https://leetcode.com/problems/climbing-stairs/,Amazon|Google|Adobe
+15,Binary Tree Level Order Traversal,Tree|BFS,Medium,https://leetcode.com/problems/binary-tree-level-order-traversal/,Amazon|Microsoft|Facebook
+16,Maximum Subarray,Array|Dynamic Programming,Medium,https://leetcode.com/problems/maximum-subarray/,Amazon|Microsoft|LinkedIn
+17,Unique Paths,Dynamic Programming|Math,Medium,https://leetcode.com/problems/unique-paths/,Google|Amazon|Facebook
+18,Coin Change,Dynamic Programming|Array,Medium,https://leetcode.com/problems/coin-change/,Amazon|Adobe|Apple
+19,Word Search,Array|Backtracking|Matrix,Medium,https://leetcode.com/problems/word-search/,Amazon|Microsoft|Facebook
+20,Number of Islands,Array|DFS|BFS|Graph,Medium,https://leetcode.com/problems/number-of-islands/,Amazon|Google|Facebook
+21,Course Schedule,Graph|DFS|BFS,Medium,https://leetcode.com/problems/course-schedule/,Google|Amazon|Microsoft
+22,LRU Cache,Hash Table|Linked List|Design,Medium,https://leetcode.com/problems/lru-cache/,Amazon|Google|Facebook
+23,Merge Intervals,Array|Sorting,Medium,https://leetcode.com/problems/merge-intervals/,Amazon|Google|Microsoft
+24,Binary Tree Right Side View,Tree|DFS|BFS,Medium,https://leetcode.com/problems/binary-tree-right-side-view/,Amazon|Facebook|Microsoft
+25,House Robber,Dynamic Programming|Array,Medium,https://leetcode.com/problems/house-robber/,Amazon|Google|Apple

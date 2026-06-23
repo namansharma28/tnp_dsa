@@ -1,0 +1,82 @@
+.header {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 4px 12px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(16px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.875rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.deptName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.universityName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.portalBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+  background-color: var(--color-brand-light);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.03);
+}
+
+@media (min-width: 640px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.875rem 1.5rem;
+  }
+}
