@@ -98,4 +98,4 @@ id,title,topics,difficulty,leetcode_url,company_tags
 97,Excel Sheet Column Number,Math|String,Easy,https://leetcode.com/problems/excel-sheet-column-number/,Amazon|Google|Microsoft
 98,Factorial Trailing Zeroes,Math,Medium,https://leetcode.com/problems/factorial-trailing-zeroes/,Amazon|Microsoft|Google
 99,"Pow(x,n)",Math|Recursion|Binary Exponentiation,Medium,https://leetcode.com/problems/powx-n/,Google|Amazon|Microsoft
-100,Super Pow,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
+100,Super Pow,Math|modulo Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
