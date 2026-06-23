@@ -1,19 +1,25 @@
-import type { Question } from '../types';
+import type { Question, AptitudeQuestion } from '../types';
 import styles from './QuestionCard.module.css';
 
 interface QuestionCardProps {
-  question: Question;
+  question: Question | AptitudeQuestion;
   isSolved: boolean;
+  isBookmarked?: boolean;
   onToggleSolved: (e: React.MouseEvent) => void;
+  onToggleBookmark?: (e: React.MouseEvent) => void;
   onClick: () => void;
 }
 
 const QuestionCard = ({
   question,
   isSolved,
+  isBookmarked,
   onToggleSolved,
+  onToggleBookmark,
   onClick,
 }: QuestionCardProps) => {
+  const isAptitude = !('difficulty' in question);
+
   const getDifficultyClass = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy':
@@ -40,12 +46,22 @@ const QuestionCard = ({
     return colors[hash % colors.length];
   };
 
+  const handleClick = () => {
+    if (isAptitude) {
+      const q = question as AptitudeQuestion;
+      window.open(q.practice_url, '_blank');
+    } else {
+      onClick();
+    }
+  };
+
   const topics = question.topics.split('|');
 
   return (
     <div 
-      className={`${styles.card} ${isSolved ? styles.cardSolved : ''}`} 
-      onClick={onClick}
+      className={`${styles.card} ${isSolved ? styles.cardSolved : ''} ${isAptitude ? styles.aptitudeCard : ''}`} 
+      onClick={handleClick}
+      title={isAptitude ? "Click to open practice resource directly" : "Click to view details"}
     >
       <div className={styles.header}>
         <div className={styles.titleSection}>
@@ -63,9 +79,12 @@ const QuestionCard = ({
           </button>
           <h3 className={styles.title}>{question.title}</h3>
         </div>
-        <span className={`${styles.badge} ${getDifficultyClass(question.difficulty)}`}>
-          {question.difficulty}
-        </span>
+        
+        {!isAptitude && 'difficulty' in question && (
+          <span className={`${styles.badge} ${getDifficultyClass(question.difficulty)}`}>
+            {question.difficulty}
+          </span>
+        )}
       </div>
 
       <div className={styles.topics}>
@@ -78,6 +97,23 @@ const QuestionCard = ({
           </span>
         ))}
       </div>
+
+      {/* Bookmark Save for Revision corner icon for DSA cards */}
+      {!isAptitude && onToggleBookmark && (
+        <button
+          className={`${styles.bookmarkButton} ${isBookmarked ? styles.bookmarkActive : ''}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleBookmark(e);
+          }}
+          aria-label={isBookmarked ? "Remove from revision" : "Save for revision"}
+          title={isBookmarked ? "Remove from revision" : "Save for revision"}
+        >
+          <svg className={styles.bookmarkIcon} viewBox="0 0 24 24" fill={isBookmarked ? "currentColor" : "none"} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 };

@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 150px;
+  position: relative;
   transition: var(--transition-smooth);
 }
 
@@ -28,12 +29,17 @@
   opacity: 1;
 }
 
+.aptitudeCard {
+  min-height: 120px;
+}
+
 .header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
+  padding-right: 1.25rem; /* space for bookmark button */
 }
 
 .titleSection {
@@ -144,6 +150,37 @@
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
+}
+
+/* Bookmark revision button */
+.bookmarkButton {
+  position: absolute;
+  top: 0;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  padding: 0.25rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.bookmarkButton:hover {
+  color: #ef4444;
+  transform: translateY(2px);
+}
+
+.bookmarkActive {
+  color: #ef4444;
+}
+
+.bookmarkIcon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 /* Colored topic variations (Hashed) */

@@ -1,6 +1,11 @@
 import styles from './Header.module.css';
 
-const Header = () => {
+interface HeaderProps {
+  activeTab: 'home' | 'dsa' | 'aptitude';
+  onTabChange: (tab: 'home' | 'dsa' | 'aptitude') => void;
+}
+
+const Header = ({ activeTab, onTabChange }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -11,9 +16,27 @@ const Header = () => {
             <span className={styles.universityName}>RGPV, Bhopal</span>
           </div>
         </div>
-        <div className={styles.badgeWrapper}>
-          <span className={styles.portalBadge}>DSA Practice Portal</span>
-        </div>
+
+        <nav className={styles.navbar}>
+          <button
+            className={`${styles.navLink} ${activeTab === 'home' ? styles.active : ''}`}
+            onClick={() => onTabChange('home')}
+          >
+            Home
+          </button>
+          <button
+            className={`${styles.navLink} ${activeTab === 'dsa' ? styles.active : ''}`}
+            onClick={() => onTabChange('dsa')}
+          >
+            DSA
+          </button>
+          <button
+            className={`${styles.navLink} ${activeTab === 'aptitude' ? styles.active : ''}`}
+            onClick={() => onTabChange('aptitude')}
+          >
+            Aptitude
+          </button>
+        </nav>
       </div>
     </header>
   );

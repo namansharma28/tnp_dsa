@@ -1,11 +1,10 @@
 .header {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  border-bottom: 2px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01), 0 4px 12px rgba(0, 0, 0, 0.02);
-  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
 }
 
 .container {
@@ -14,7 +13,7 @@
   padding: 0.875rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.875rem;
   align-items: center;
 }
 
@@ -22,14 +21,23 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  transition: var(--transition-smooth);
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   border-radius: var(--radius-md);
   object-fit: cover;
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.brand:hover .logo {
+  transform: scale(1.05);
+  border-color: var(--color-brand);
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.15);
 }
 
 .brandText {
@@ -55,22 +63,43 @@
   margin-top: 0.15rem;
 }
 
-.badgeWrapper {
+/* Navbar: Button-based segment control */
+.navbar {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
-.portalBadge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.navLink {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-lg);
+  transition: var(--transition-smooth);
+  outline: none;
+  text-align: center;
+  user-select: none;
+}
+
+.navLink:hover {
   color: var(--color-brand);
   background-color: var(--color-brand-light);
-  border: 1px solid rgba(79, 70, 229, 0.15);
-  padding: 0.3rem 0.75rem;
-  border-radius: 9999px;
-  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.03);
+  border-color: var(--color-brand);
+}
+
+.navLink.active {
+  color: white;
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 @media (min-width: 640px) {
@@ -78,5 +107,11 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0.875rem 1.5rem;
+    gap: 0;
+  }
+
+  .navbar {
+    width: auto;
+    gap: 0.75rem;
   }
 }

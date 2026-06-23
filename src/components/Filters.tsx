@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react';
 import styles from './Filters.module.css';
 
 interface FiltersProps {
@@ -10,6 +11,82 @@ interface FiltersProps {
   onDifficultyChange: (difficulty: string) => void;
   onSearchChange: (query: string) => void;
 }
+
+// Custom drop-down selector component
+interface CustomSelectProps {
+  value: string;
+  onChange: (val: string) => void;
+  options: string[];
+  placeholder: string;
+  className?: string;
+}
+
+const CustomSelect = ({ value, onChange, options, placeholder, className }: CustomSelectProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  return (
+    <div className={`${styles.customSelectContainer} ${className || ''}`} ref={containerRef}>
+      <button 
+        type="button" 
+        className={styles.customSelectTrigger} 
+        onClick={() => setIsOpen(!isOpen)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+      >
+        <span>{value || placeholder}</span>
+        <svg 
+          className={`${styles.customSelectArrow} ${isOpen ? styles.customSelectArrowOpen : ''}`} 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      
+      {isOpen && (
+        <ul className={styles.customSelectOptions} role="listbox">
+          <li 
+            className={`${styles.customSelectOption} ${!value ? styles.customSelectOptionActive : ''}`}
+            onClick={() => {
+              onChange('');
+              setIsOpen(false);
+            }}
+            role="option"
+            aria-selected={!value}
+          >
+            {placeholder}
+          </li>
+          {options.map((option) => (
+            <li 
+              key={option}
+              className={`${styles.customSelectOption} ${value === option ? styles.customSelectOptionActive : ''}`}
+              onClick={() => {
+                onChange(option);
+                setIsOpen(false);
+              }}
+              role="option"
+              aria-selected={value === option}
+            >
+              {option}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
 
 const Filters = ({
   topics,
@@ -24,6 +101,7 @@ const Filters = ({
   return (
     <div className={styles.filters}>
       <div className={styles.container}>
+        {/* Search Field */}
         <div className={styles.searchWrapper}>
           <svg
             className={styles.searchIcon}
@@ -47,31 +125,24 @@ const Filters = ({
           />
         </div>
 
-        <select
-          value={selectedDifficulty}
-          onChange={(e) => onDifficultyChange(e.target.value)}
-          className={styles.select}
-        >
-          <option value="">All Levels</option>
-          {difficulties.map((difficulty) => (
-            <option key={difficulty} value={difficulty}>
-              {difficulty}
-            </option>
-          ))}
-        </select>
+        {/* Custom Difficulty Select */}
+        {difficulties.length > 0 && (
+          <CustomSelect
+            value={selectedDifficulty}
+            onChange={onDifficultyChange}
+            options={difficulties}
+            placeholder="All Levels"
+          />
+        )}
 
-        <select
+        {/* Custom Topic Select */}
+        <CustomSelect
           value={selectedTopic}
-          onChange={(e) => onTopicChange(e.target.value)}
-          className={`${styles.select} ${styles.topicSelect}`}
-        >
-          <option value="">All Categories</option>
-          {topics.map((topic) => (
-            <option key={topic} value={topic}>
-              {topic}
-            </option>
-          ))}
-        </select>
+          onChange={onTopicChange}
+          options={topics}
+          placeholder="All Categories"
+          className={styles.topicSelect}
+        />
       </div>
     </div>
   );
