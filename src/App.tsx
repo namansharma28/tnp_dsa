@@ -283,45 +283,7 @@ function App() {
             <img src="/tnp_logo.jpg" alt="T&P Cell RGPV" className={styles.heroImage} />
           </div>
         </section>
-        {activeTab === 'home' && (
-          <div className={styles.homeLayout}>
-            {/* NOTICE SECTION: Takes 3/4th of area */}
-            <section className={styles.noticeSection}>
-              <div className={styles.noticeBoard}>
-                <div className={styles.noticeHeader}>
-                  <div className={styles.noticePulse}></div>
-                  <h2 className={styles.noticeTitle}>Placement Notices & Notice Board</h2>
-                </div>
-
-                {notices.length > 0 ? (
-                  <div className={styles.noticeList}>
-                    {notices.map((notice, index) => (
-                      <a
-                        key={index}
-                        href={notice.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.noticeCard}
-                      >
-                        <div className={styles.noticeCardHeader}>
-                          <svg className={styles.noticeIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                          </svg>
-                          <span className={styles.noticeBadge}>Latest Announcement</span>
-                        </div>
-                        <h3 className={styles.noticeCardTitle}>{notice.title}</h3>
-                      </a>
-                    ))}
-                  </div>
-                ) : (
-                  <div className={styles.emptyNotices}>
-                    <p>No recent announcements posted. Check back later.</p>
-                  </div>
-                )}
-              </div>
-            </section>
-
-            {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
+        {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
             <div className={styles.progressRow}>
               {/* Prepare for DSA Card */}
               <div className={styles.prepCard}>
@@ -375,6 +337,99 @@ function App() {
             </div>
           </div>
         )}
+        {activeTab === 'home' && (
+          <div className={styles.homeLayout}>
+            {/* NOTICE SECTION: Takes 3/4th of area */}
+            <section className={styles.noticeSection}>
+              <div className={styles.noticeBoard}>
+                <div className={styles.noticeHeader}>
+                  <div className={styles.noticePulse}></div>
+                  <h2 className={styles.noticeTitle}>Placement Notices & Notice Board</h2>
+                </div>
+
+                {notices.length > 0 ? (
+                  <div className={styles.noticeList}>
+                    {notices.map((notice, index) => (
+                      <a
+                        key={index}
+                        href={notice.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.noticeCard}
+                      >
+                        <div className={styles.noticeCardHeader}>
+                          <svg className={styles.noticeIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                          </svg>
+                          <span className={styles.noticeBadge}>Latest Announcement</span>
+                        </div>
+                        <h3 className={styles.noticeCardTitle}>{notice.title}</h3>
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <div className={styles.emptyNotices}>
+                    <p>No recent announcements posted. Check back later.</p>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            /*
+            {/* PROGRESS CARDS: Two cards below notices taking half-half area */}
+            <div className={styles.progressRow}>
+              {/* Prepare for DSA Card */}
+              <div className={styles.prepCard}>
+                <div className={styles.prepHeader}>
+                  <h3 className={styles.prepCardTitle}>Prepare for DSA</h3>
+                  <span className={styles.prepPercent}>{dsaStats.percent}%</span>
+                </div>
+
+                <div className={styles.prepProgressWrapper}>
+                  <div
+                    className={styles.prepProgressBar}
+                    style={{ width: `${dsaStats.percent}%` }}
+                  ></div>
+                </div>
+
+                <div className={styles.prepInfo}>
+                  <span>Solved {dsaStats.solved} of {dsaStats.total} Questions</span>
+                  <button
+                    onClick={() => setActiveTab('dsa')}
+                    className={styles.prepButton}
+                    Practice DSA →
+                   >
+                 </button>
+                </div>
+              </div>
+
+              {/* Prepare for Aptitude Card */}
+              <div className={styles.prepCard}>
+                <div className={styles.prepHeader}>
+                  <h3 className={styles.prepCardTitle}>Prepare for Aptitude</h3>
+                  <span className={styles.prepPercent}>{aptStats.percent}%</span>
+                </div>
+
+                <div className={styles.prepProgressWrapper}>
+                  <div
+                    className={styles.prepProgressBar}
+                    style={{ width: `${aptStats.percent}%` }}
+                  ></div>
+                </div>
+
+                <div className={styles.prepInfo}>
+                  <span>Solved {aptStats.solved} of {aptStats.total} Questions</span>
+                  <button
+                    onClick={() => setActiveTab('aptitude')}
+                    className={styles.prepButton}
+                  >
+                    Practice Aptitude →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )} */
 
         {/* VIEW 2: DSA CURRICULUM VIEW */}
         {activeTab === 'dsa' && (
