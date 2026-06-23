@@ -97,7 +97,7 @@ id,title,topics,difficulty,leetcode_url,company_tags
 96,Happy Number,Hash Table|Math,Easy,https://leetcode.com/problems/happy-number/,Amazon|Microsoft|Google
 97,Excel Sheet Column Number,Math|String,Easy,https://leetcode.com/problems/excel-sheet-column-number/,Amazon|Google|Microsoft
 98,Factorial Trailing Zeroes,Math,Medium,https://leetcode.com/problems/factorial-trailing-zeroes/,Amazon|Microsoft|Google
-99,Pow(x,n),Math|Recursion|Binary Exponentiation,Medium,https://leetcode.com/problems/powx-n/,Google|Amazon|Microsoft
+99,"Pow(x,n)",Math|Recursion|Binary Exponentiation,Medium,https://leetcode.com/problems/powx-n/,Google|Amazon|Microsoft
 100,Super Pow,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
 101,Nth Magical Number,Math|Binary Search|LCM,Hard,https://leetcode.com/problems/nth-magical-number/,Google|Amazon|Microsoft
 102,Smallest Integer Divisible by K,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/smallest-integer-divisible-by-k/,Google|Amazon|Microsoft
