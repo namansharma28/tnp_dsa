@@ -99,18 +99,3 @@ id,title,topics,difficulty,leetcode_url,company_tags
 98,Factorial Trailing Zeroes,Math,Medium,https://leetcode.com/problems/factorial-trailing-zeroes/,Amazon|Microsoft|Google
 99,"Pow(x,n)",Math|Recursion|Binary Exponentiation,Medium,https://leetcode.com/problems/powx-n/,Google|Amazon|Microsoft
 100,Super Pow,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/super-pow/,Google|Amazon|Microsoft
-101,Nth Magical Number,Math|Binary Search|LCM,Hard,https://leetcode.com/problems/nth-magical-number/,Google|Amazon|Microsoft
-102,Smallest Integer Divisible by K,Math|Modulo Arithmetic,Medium,https://leetcode.com/problems/smallest-integer-divisible-by-k/,Google|Amazon|Microsoft
-103,Reach a Number,Math,Medium,https://leetcode.com/problems/reach-a-number/,Google|Amazon|Microsoft
-104,Mirror Reflection,Math|Geometry|GCD,Medium,https://leetcode.com/problems/mirror-reflection/,Google|Amazon|Microsoft
-105,Water and Jug Problem,Math|GCD|Number Theory,Medium,https://leetcode.com/problems/water-and-jug-problem/,Google|Amazon|Microsoft
-106,Check If It Is a Good Array,Math|GCD|Number Theory,Hard,https://leetcode.com/problems/check-if-it-is-a-good-array/,Google|Amazon|Microsoft
-107,Replace Non-Coprime Numbers in Array,Stack|Math|LCM|GCD,Hard,https://leetcode.com/problems/replace-non-coprime-numbers-in-array/,Google|Amazon|Microsoft
-108,Number of Subarrays With LCM Equal to K,Array|Math|LCM,Medium,https://leetcode.com/problems/number-of-subarrays-with-lcm-equal-to-k/,Amazon|Google|Microsoft
-109,Number of Different Subsequences GCDs,Math|Number Theory|GCD,Hard,https://leetcode.com/problems/number-of-different-subsequences-gcds/,Google|Amazon|Microsoft
-110,Prime Arrangements,Math|Combinatorics|Prime Numbers,Easy,https://leetcode.com/problems/prime-arrangements/,Amazon|Google|Microsoft
-111,Closest Prime Numbers in Range,Math|Prime Numbers|Sieve,Medium,https://leetcode.com/problems/closest-prime-numbers-in-range/,Google|Amazon|Microsoft
-112,Find Greatest Common Divisor of Array,Math|GCD|Array,Easy,https://leetcode.com/problems/find-greatest-common-divisor-of-array/,Amazon|Google|Microsoft
-113,Find the Pivot Integer,Math|Prefix Sum,Easy,https://leetcode.com/problems/find-the-pivot-integer/,Amazon|Google|Microsoft
-114,Count Symmetric Integers,Math|Digit Manipulation,Easy,https://leetcode.com/problems/count-symmetric-integers/,Amazon|Google|Microsoft
-115,Sum of Digit Differences of All Pairs,Math|Combinatorics,Medium,https://leetcode.com/problems/sum-of-digit-differences-of-all-pairs/,Google|Amazon|Microsoft
