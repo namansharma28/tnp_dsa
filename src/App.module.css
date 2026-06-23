@@ -481,42 +481,6 @@
   margin-top: 0.15rem;
 }
 
-/* RED BUTTON: Save for Revision toggle filter */
-.revisionModeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fecaca; /* Red background */
-  border: 1px solid #fca5a5;
-  color: #b91c1c; /* Crimson red text */
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
-  flex-shrink: 0;
-}
-
-.revisionModeButton:hover {
-  background-color: #ef4444; /* Darker red hover fill */
-  border-color: #dc2626;
-  color: white;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
-  transform: translateY(-2px);
-}
-
-.revisionModeButtonActive {
-  background-color: #dc2626;
-  border-color: #b91c1c;
-  color: white;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
-}
-
-.btnBookmarkIcon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
 
 /* Questions Grid */
 .grid {

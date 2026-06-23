@@ -39,7 +39,6 @@
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
-  padding-right: 1.25rem; /* space for bookmark button */
 }
 
 .titleSection {
@@ -152,11 +151,15 @@
   border: 1px solid transparent;
 }
 
-/* Bookmark revision button */
-.bookmarkButton {
-  position: absolute;
-  top: 0;
-  right: 0.75rem;
+/* Inline actions block next to difficulty badge */
+.metaActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cardBookmarkButton {
   background: none;
   border: none;
   cursor: pointer;
@@ -166,12 +169,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 
-.bookmarkButton:hover {
+.cardBookmarkButton:hover {
   color: #ef4444;
-  transform: translateY(2px);
+  transform: scale(1.15);
 }
 
 .bookmarkActive {
@@ -179,8 +181,8 @@
 }
 
 .bookmarkIcon {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 /* Colored topic variations (Hashed) */

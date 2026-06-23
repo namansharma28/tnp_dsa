@@ -10,6 +10,8 @@ interface FiltersProps {
   onTopicChange: (topic: string) => void;
   onDifficultyChange: (difficulty: string) => void;
   onSearchChange: (query: string) => void;
+  revisionMode?: boolean;
+  onRevisionToggle?: () => void;
 }
 
 // Custom drop-down selector component
@@ -97,6 +99,8 @@ const Filters = ({
   onTopicChange,
   onDifficultyChange,
   onSearchChange,
+  revisionMode = false,
+  onRevisionToggle,
 }: FiltersProps) => {
   return (
     <div className={styles.filters}>
@@ -143,6 +147,20 @@ const Filters = ({
           placeholder="All Categories"
           className={styles.topicSelect}
         />
+
+        {/* Save for Revision rectangular toggle */}
+        {onRevisionToggle && (
+          <button
+            onClick={onRevisionToggle}
+            className={`${styles.revisionModeButton} ${revisionMode ? styles.revisionModeButtonActive : ''}`}
+            title={revisionMode ? "Show All Questions" : "Show Saved for Revision"}
+            aria-label={revisionMode ? "Show All Questions" : "Show Saved for Revision"}
+          >
+            <svg className={styles.btnBookmarkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );

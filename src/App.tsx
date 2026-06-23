@@ -160,7 +160,7 @@ function App() {
   const dsaStats = useMemo(() => {
     const total = questions.length;
     const solved = questions.filter((q) => solvedDsa.includes(q.id)).length;
-    
+
     const easyTotal = questions.filter((q) => q.difficulty === 'Easy').length;
     const easySolved = questions.filter(
       (q) => q.difficulty === 'Easy' && solvedDsa.includes(q.id)
@@ -264,12 +264,12 @@ function App() {
   return (
     <div className={styles.app}>
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
-     
+
 
 
       <main className={styles.main}>
         {/* VIEW 1: HOME VIEW */}
-         <section className={styles.hero}>
+        <section className={styles.hero}>
           <div className={styles.heroContent}>
             <span className={styles.heroTagline}>Training & Placement Cell, RGPV</span>
             <h1 className={styles.heroTitle}>Preparation for Placement</h1>
@@ -290,15 +290,15 @@ function App() {
                   <div className={styles.noticePulse}></div>
                   <h2 className={styles.noticeTitle}>Placement Notices & Notice Board</h2>
                 </div>
-                
+
                 {notices.length > 0 ? (
                   <div className={styles.noticeList}>
                     {notices.map((notice, index) => (
-                      <a 
+                      <a
                         key={index}
-                        href={notice.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                        href={notice.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={styles.noticeCard}
                       >
                         <div className={styles.noticeCardHeader}>
@@ -327,17 +327,17 @@ function App() {
                   <h3 className={styles.prepCardTitle}>Prepare for DSA</h3>
                   <span className={styles.prepPercent}>{dsaStats.percent}%</span>
                 </div>
-                
+
                 <div className={styles.prepProgressWrapper}>
-                  <div 
-                    className={styles.prepProgressBar} 
+                  <div
+                    className={styles.prepProgressBar}
                     style={{ width: `${dsaStats.percent}%` }}
                   ></div>
                 </div>
-                
+
                 <div className={styles.prepInfo}>
                   <span>Solved {dsaStats.solved} of {dsaStats.total} Questions</span>
-                  <button 
+                  <button
                     onClick={() => setActiveTab('dsa')}
                     className={styles.prepButton}
                   >
@@ -352,17 +352,17 @@ function App() {
                   <h3 className={styles.prepCardTitle}>Prepare for Aptitude</h3>
                   <span className={styles.prepPercent}>{aptStats.percent}%</span>
                 </div>
-                
+
                 <div className={styles.prepProgressWrapper}>
-                  <div 
-                    className={styles.prepProgressBar} 
+                  <div
+                    className={styles.prepProgressBar}
                     style={{ width: `${aptStats.percent}%` }}
                   ></div>
                 </div>
-                
+
                 <div className={styles.prepInfo}>
                   <span>Solved {aptStats.solved} of {aptStats.total} Questions</span>
-                  <button 
+                  <button
                     onClick={() => setActiveTab('aptitude')}
                     className={styles.prepButton}
                   >
@@ -387,10 +387,10 @@ function App() {
                   </div>
                   <span className={styles.dashboardPercent}>{dsaStats.percent}% Solved</span>
                 </div>
-                
+
                 <div className={styles.progressBarWrapper}>
-                  <div 
-                    className={styles.progressBar} 
+                  <div
+                    className={styles.progressBar}
                     style={{ width: `${dsaStats.percent}%` }}
                   ></div>
                 </div>
@@ -435,6 +435,11 @@ function App() {
                 setDsaSearch(query);
                 setDsaPage(1);
               }}
+              revisionMode={revisionMode}
+              onRevisionToggle={() => {
+                setRevisionMode(!revisionMode);
+                setDsaPage(1);
+              }}
             />
 
             {/* Questions Grid Section */}
@@ -445,21 +450,6 @@ function App() {
                   Showing {filteredDsaQuestions.length} of {questions.length} question{filteredDsaQuestions.length !== 1 ? 's' : ''}
                 </p>
               </div>
-
-              {/* RED BUTTON: Save for Revision toggle filter */}
-              <button
-                onClick={() => {
-                  setRevisionMode(!revisionMode);
-                  setDsaPage(1);
-                }}
-                className={`${styles.revisionModeButton} ${revisionMode ? styles.revisionModeButtonActive : ''}`}
-                title={revisionMode ? "Show All Questions" : "Show Saved for Revision"}
-                aria-label={revisionMode ? "Show All Questions" : "Show Saved for Revision"}
-              >
-                <svg className={styles.btnBookmarkIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                </svg>
-              </button>
             </div>
 
             {paginatedDsaQuestions.length > 0 ? (
@@ -483,7 +473,7 @@ function App() {
                     />
                   ))}
                 </div>
-                
+
                 {dsaTotalPages > 1 && (
                   <Pagination
                     currentPage={dsaPage}
@@ -499,8 +489,8 @@ function App() {
                   {revisionMode ? "No revision items bookmarked" : "No matching questions"}
                 </h3>
                 <p className={styles.emptyDescription}>
-                  {revisionMode 
-                    ? "Bookmark questions by clicking the icon on card corners to review them later." 
+                  {revisionMode
+                    ? "Bookmark questions by clicking the icon on card corners to review them later."
                     : "Adjust your keyword searches or dropdown filters."}
                 </p>
               </div>
@@ -521,10 +511,10 @@ function App() {
                   </div>
                   <span className={styles.dashboardPercent}>{aptStats.percent}% Solved</span>
                 </div>
-                
+
                 <div className={styles.progressBarWrapper}>
-                  <div 
-                    className={styles.progressBar} 
+                  <div
+                    className={styles.progressBar}
                     style={{ width: `${aptStats.percent}%` }}
                   ></div>
                 </div>
@@ -549,7 +539,7 @@ function App() {
                 setAptTopic(topic);
                 setAptPage(1);
               }}
-              onDifficultyChange={() => {}}
+              onDifficultyChange={() => { }}
               onSearchChange={(query) => {
                 setAptSearch(query);
                 setAptPage(1);
@@ -578,11 +568,11 @@ function App() {
                         e.stopPropagation();
                         toggleSolvedAptitude(question.id);
                       }}
-                      onClick={() => {}} // clicking redirects directly (handled in Card)
+                      onClick={() => { }} // clicking redirects directly (handled in Card)
                     />
                   ))}
                 </div>
-                
+
                 {aptTotalPages > 1 && (
                   <Pagination
                     currentPage={aptPage}
@@ -613,11 +603,11 @@ function App() {
 
       {/* Modal detail overlay (DSA only) */}
       {selectedQuestion && (
-        <Modal 
-          question={selectedQuestion} 
+        <Modal
+          question={selectedQuestion}
           isSolved={solvedDsa.includes(selectedQuestion.id)}
           onToggleSolved={() => toggleSolvedDsa(selectedQuestion.id)}
-          onClose={() => setSelectedQuestion(null)} 
+          onClose={() => setSelectedQuestion(null)}
         />
       )}
     </div>
